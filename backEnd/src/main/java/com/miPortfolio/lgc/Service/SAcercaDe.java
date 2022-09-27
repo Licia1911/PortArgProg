@@ -30,11 +30,12 @@ public class SAcercaDe {
         rAcercaDe.deleteById(id);
     }
 
-    public boolean existById(int id){
-        return rAcercaDe.existsById(id);
+
+    public boolean  existsByNombreAD(String nomnreAD){
+        return rAcercaDe.existsByNombreAD(nomnreAD);
     }
 
-    public boolean  existByNombreAD(String nomnreAD){
-        return rAcercaDe.existByNombreAD(nomnreAD);
+    public boolean existsById(int id) {
+        return rAcercaDe.existsById(id);
     }
 }

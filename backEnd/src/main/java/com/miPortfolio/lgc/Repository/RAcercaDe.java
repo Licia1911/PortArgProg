@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface RAcercaDe extends JpaRepository<AcercaDe, Integer> {
     public Optional<AcercaDe> findByNombreAD(String nombreAD);
-    public boolean existByNombreAD(String nombreAD);
+    public boolean existsByNombreAD(String nombreAD);
 }

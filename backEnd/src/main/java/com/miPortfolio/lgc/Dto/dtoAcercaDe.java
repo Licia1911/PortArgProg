@@ -1,23 +1,37 @@
 package com.miPortfolio.lgc.Dto;
 
-import lombok.Getter;
-import lombok.Setter;
+
 
 import javax.validation.constraints.NotBlank;
 
-@Getter
-@Setter
+
 public class dtoAcercaDe {
     @NotBlank
-    private String nombreAE;
+    private String nombreAD;
     @NotBlank
-    private String descripcionAE;
+    private String descripcionAD;
 
     public dtoAcercaDe() {
     }
 
     public dtoAcercaDe(String nombreAE, String descripcionAE) {
-        this.nombreAE = nombreAE;
-        this.descripcionAE = descripcionAE;
+        this.nombreAD = nombreAD;
+        this.descripcionAD = descripcionAD;
+    }
+
+    public String getNombreAD() {
+        return nombreAD;
+    }
+
+    public void setNombreAD(String nombreAD) {
+        this.nombreAD = nombreAD;
+    }
+
+    public String getDescripcionAD() {
+        return descripcionAD;
+    }
+
+    public void setDescripcionAD(String descripcionAD) {
+        this.descripcionAD = descripcionAD;
     }
 }

@@ -35,12 +35,12 @@ public class SExperiencia {
         rExperiencia.deleteById(id);
     }
 
-    public boolean existById(int id){
+    public boolean existsById(int id){
         return rExperiencia.existsById(id);
     }
 
-    public boolean existByNombreExp(String nombreExp){
-        return rExperiencia.existByNombreExp(nombreExp);
+    public boolean existsByNombreExp(String nombreExp){
+        return rExperiencia.existsByNombreExp(nombreExp);
     }
 
 }

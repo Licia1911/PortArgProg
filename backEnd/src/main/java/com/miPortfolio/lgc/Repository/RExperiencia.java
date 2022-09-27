@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface RExperiencia extends JpaRepository<Experiencia, Integer> {
     public Optional<Experiencia> findByNombreExp(String nombreExp);
-    public boolean existByNombreExp(String nombreExp);
+    public boolean existsByNombreExp(String nombreExp);
 }

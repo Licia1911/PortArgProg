@@ -1,17 +1,27 @@
 package com.miPortfolio.lgc.Security.Controller;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+
+
 public class Mensaje {
-    private String Mensaje;
+    private String mensaje;
+
+    //Constructor
 
     public Mensaje() {
     }
 
     public Mensaje(String mensaje) {
-        Mensaje = mensaje;
+        this.mensaje = mensaje;
     }
+    //Getter y Setter
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
+    }
+
 }

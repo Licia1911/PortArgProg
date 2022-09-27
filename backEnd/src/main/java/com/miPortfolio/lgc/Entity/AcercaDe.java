@@ -9,22 +9,46 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-@Getter
-@Setter
+
 @Entity
 public class AcercaDe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombreAE;
+    private String nombreAD;
     @NotNull
-    private String descripcionAE;
+    private String descripcionAD;
 
     public AcercaDe() {
     }
 
     public AcercaDe(String nombreAE, String descripcionAE) {
-        this.nombreAE = nombreAE;
-        this.descripcionAE = descripcionAE;
+        this.nombreAD = nombreAD;
+        this.descripcionAD = descripcionAD;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombreAD() {
+        return nombreAD;
+    }
+
+    public void setNombreAD(String nombreAD) {
+        this.nombreAD = nombreAD;
+    }
+
+    public String getDescripcionAD() {
+        return descripcionAD;
+    }
+
+    public void setDescripcionAD(String descripcionAD) {
+        this.descripcionAD = descripcionAD;
+    }
+
 }

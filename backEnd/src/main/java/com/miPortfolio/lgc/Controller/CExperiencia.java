@@ -29,7 +29,7 @@ public class CExperiencia {
         if (StringUtils.isBlank(dtoexperiencia.getNombreExp()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 
-        if (sExperiencia.existByNombreExp(dtoexperiencia.getNombreExp()))
+        if (sExperiencia.existsByNombreExp(dtoexperiencia.getNombreExp()))
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
 
     Experiencia experiencia = new Experiencia(dtoexperiencia.getNombreExp(), dtoexperiencia.getDescripcionExp());
@@ -39,10 +39,10 @@ public class CExperiencia {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexperiencia){
-        if (!sExperiencia.existById(id))
+        if (!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
 
-        if (sExperiencia.existByNombreExp(dtoexperiencia.getNombreExp())&& sExperiencia.getByNombreExp(dtoexperiencia.getNombreExp()).get().getId() != id)
+        if (sExperiencia.existsByNombreExp(dtoexperiencia.getNombreExp())&& sExperiencia.getByNombreExp(dtoexperiencia.getNombreExp()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
 
         if (StringUtils.isBlank(dtoexperiencia.getNombreExp()))
@@ -57,7 +57,7 @@ public class CExperiencia {
     }
 
     public ResponseEntity<?> delete(@PathVariable("id") int id){
-        if (!sExperiencia.existById(id))
+        if (!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
 
         sExperiencia.delete(id);
