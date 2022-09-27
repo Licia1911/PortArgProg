@@ -1,4 +1,6 @@
 package com.miPortfolio.lgc.Security.Enums;
 
-public class RolNombre {
+public enum RolNombre {
+    ROLE_ADMIN,
+    ROLE_USER
 }
