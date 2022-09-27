@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired
     IPersonaService iPersonaService;
@@ -45,5 +46,10 @@ public class PersonaController {
 
         iPersonaService.savePersona(persona);
         return persona;
+    }
+
+    @GetMapping("/persona/traer/perfil")
+    public Persona findPersona(){
+        return iPersonaService.findPersona((long) 1);
     }
 }
