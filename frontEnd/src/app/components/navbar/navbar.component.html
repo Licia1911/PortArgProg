@@ -26,6 +26,11 @@
                     </ul>
                 </div>
             </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary" (click)="login()" *ngIf="!isLogged"><i class="bi bi-person-circle"></i>Ingresar</button>
+
+                <button type="button" class="btn btn-outline-secondary" (click)="onLogOut()" *ngIf="isLogged"><i class="bi bi-person-circle"></i>Cerrar Sesion</button>
+            </div>
         </div>
     </nav>
 </div>

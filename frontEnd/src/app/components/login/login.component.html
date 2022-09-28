@@ -1,1 +1,18 @@
-<p>login works!</p>
+<body>
+
+    <div class="container">
+        <h2><i class="bi bi-person-workspace"></i>Login</h2>
+
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+            <input type="text" name="nombreUsuario" [(ngModel)]="nombreUsuario" required id="nombreUsuario" placeholder="Nombre de Usuario">
+
+            <input type="password" name="password" id="password" placeholder="Contraseña"[(ngModel)]="password" required>
+
+            <div class="btns">
+                <button type="submit" id="sign-up">Login</button>
+            </div>
+
+        </form>
+    </div>
+</body>

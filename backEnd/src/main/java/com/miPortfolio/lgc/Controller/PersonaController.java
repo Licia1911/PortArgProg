@@ -3,6 +3,7 @@ package com.miPortfolio.lgc.Controller;
 import com.miPortfolio.lgc.Entity.Persona;
 import com.miPortfolio.lgc.Interface.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,18 +19,19 @@ public class PersonaController {
         return iPersonaService.getPersonas();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/persona/crear")
     public String createPersona(@RequestBody Persona persona){
         iPersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/persona/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         iPersonaService.deletePersona(id);
         return "La persona fue eliminada correctamente";
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/persona/editar/{id}")
     public Persona editPersona(@PathVariable Long id, @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("git") String nuevoGit,
