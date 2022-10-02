@@ -6,6 +6,9 @@
     background-color: rgb(57, 56, 56) !important;
 }
 
+#edit{
+    color: #f033b1;
+}
 
 
 #fotoPerfil{
@@ -56,6 +59,7 @@ h3{
 .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
 {
     margin-right: 5px;
+    background-color : transparent;
 }
 
 #logo{

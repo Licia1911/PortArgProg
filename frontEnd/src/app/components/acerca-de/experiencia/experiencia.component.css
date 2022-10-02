@@ -7,3 +7,38 @@
     border-bottom: 0.5px solid #f033b1;
 }
 
+i{
+    color: #f033b1;
+}
+
+.modal-title{
+    color: #f033b1;
+}
+
+.form-control{
+    background-color: rgb(43, 43, 43) !important;
+    border-color: #f033b1;
+    color: rgb(196, 200, 200);
+}
+
+.btn-close{
+    background-color: #f033b1;
+}
+
+.col-form-label{
+    color: #f033b1;
+}
+
+.myModal-header{
+    background-color: rgb(43, 43, 43) !important;
+    border: 2px solid #f033b1;
+}
+
+.myModal-body{
+    background-color: rgb(43, 43, 43) !important;
+    border: 2px solid #f033b1;
+}
+.myModal-footer{
+    background-color: rgb(43, 43, 43) !important;
+    border: 2px solid #f033b1;
+}
